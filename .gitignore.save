@@ -1,0 +1,39 @@
+# Vivado
+.vivado/
+*.jou
+*.log
+*.str
+*.cache
+*.hw
+*.runs/
+*.sim/
+*.ip_user_files/
+*.xpr
+
+# OS
+*~
+*.swp
+
+# Python / scripts
+__pycache__/
+
+# Build outputs
+*.bit
+*.bin
+
+T
+^T
+T
+C
+
+
+
+
+
+
+X
+^X
+
+
+
+
