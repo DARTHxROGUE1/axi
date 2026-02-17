@@ -1,4 +1,25 @@
+This project implements an AXI4-Lite SPI controller on the programmable logic (PL) of the Kria KV260 FPGA platform.
+The FPGA behaves as an external memory-mapped AXI slave peripheral, controlled by an external AXI master (processor or SoC).
+The design exposes a register interface over AXI for configuring and operating an SPI master connected to external SPI devices.
 
+I would recommmend a custom .xdc file based on your fpga and do read the pin mappings
+
+# architecture
+   
+     External Processor / SoC (AXI Master)
+            |
+     Physical AXI Bus (board traces)
+            │
+        FPGA device
+            │
+      axi_spi_top (AXI Slave + SPI Controller) 
+            │
+        SPI pins
+            │
+     External SPI Device (Display / Peripheral)
+
+
+<img width="1536" height="1024" alt="ChatGPT Image Feb 18, 2026, 12_28_23 AM" src="https://github.com/user-attachments/assets/b0cec811-462c-4466-983e-7118f4b6a000" />
 
 
 # RTL
