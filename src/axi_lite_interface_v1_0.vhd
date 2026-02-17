@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 --debugged using claude ai
-entity interface is
+entity axi4_lite_interface_v1_0 is
   generic(
     DATA_BUS_64_BITS : integer range 0 to 1 := 0;
     ADDR_WIDTH : integer range 1 to 12 := 2;
@@ -42,9 +42,9 @@ entity interface is
     clk           : out std_logic;
     resetn        : out std_logic
   );
-end entity interface;
+end entity axi4_lite_interface_v1_0;
 
-architecture arch_imp of interface is
+architecture arch_imp of axi4_lite_interface_v1_0 is
   signal awready : std_logic;
   signal wready  : std_logic;
   signal bresp   : std_logic_vector(1 downto 0);
